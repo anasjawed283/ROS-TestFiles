@@ -3,6 +3,15 @@
 import rospy
 from your_package_name.msg import StringIntFloatBool  # Import the custom message type
 
+def get_user_input():
+    string_data = input("Enter a string: ")
+    int_data = int(input("Enter an integer: "))
+    float_data = float(input("Enter a float: "))
+    bool_data_str = input("Enter a boolean (True/False): ")
+    bool_data = bool_data_str.lower() == 'true'
+
+    return string_data, int_data, float_data, bool_data
+
 def publisher_node():
     # Initialize the ROS node
     rospy.init_node('my_publisher_node', anonymous=True)
@@ -14,12 +23,15 @@ def publisher_node():
     rate = rospy.Rate(1)
 
     while not rospy.is_shutdown():
+        # Get user input
+        string_data, int_data, float_data, bool_data = get_user_input()
+
         # Create a StringIntFloatBool message and publish it
         message = StringIntFloatBool()
-        message.string_data = 'Hello, ROS!'
-        message.int_data = 42  # Replace with your integer data
-        message.float_data = 3.14  # Replace with your float data
-        message.bool_data = True  # Replace with your boolean data
+        message.string_data = string_data
+        message.int_data = int_data
+        message.float_data = float_data
+        message.bool_data = bool_data
         pub.publish(message)
 
         # Wait according to the specified rate
