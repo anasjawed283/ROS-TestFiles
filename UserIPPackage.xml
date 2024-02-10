@@ -1,0 +1,14 @@
+<build_depend>message_generation</build_depend>
+<exec_depend>message_runtime</exec_depend>
+
+<build_export_depend>message_generation</build_export_depend>
+<exec_export_depend>message_runtime</exec_export_depend>
+
+<build_depend>std_msgs</build_depend>
+<exec_depend>std_msgs</exec_depend>
+
+<build_depend>your_package_name</build_depend>  <!-- Add your package as a dependency -->
+
+<export>
+  <message_generation declared-runtime-dependency="message_runtime"/>
+</export>
