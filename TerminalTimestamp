@@ -1,0 +1,14 @@
+ros2@Robot-1:~$ cd 21brs1336
+ros2@Robot-1:~/21brs1336$ cd src
+ros2@Robot-1:~/21brs1336/src$ cd new_pkg
+ros2@Robot-1:~/21brs1336/src/new_pkg$ chmod +x talker.py
+ros2@Robot-1:~/21brs1336/src/new_pkg$ cd ..
+ros2@Robot-1:~/21brs1336/src$ cd ..
+ros2@Robot-1:~/21brs1336$ source devel/setup.bash
+ros2@Robot-1:~/21brs1336$ rosrun new_pkg talker.py
+[INFO] [1706072169.156899]: Anas Jawed 1706072169.15666
+[INFO] [1706072169.257199]: Anas Jawed 1706072169.2569354
+[INFO] [1706072169.357216]: Anas Jawed 1706072169.3569226
+[INFO] [1706072169.457229]: Anas Jawed 1706072169.456939
+[INFO] [1706072169.557217]: Anas Jawed 1706072169.556928
+[INFO] [1706072169.657216]: Anas Jawed 1706072169.6569211
