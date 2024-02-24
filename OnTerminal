@@ -1,0 +1,78 @@
+ros2@Robot-1:~$ mkdir -p ~/21brs1336/src
+ros2@Robot-1:~$ cs ~/21brs1336
+
+Command 'cs' not found, but can be installed with:
+
+sudo apt install csound
+
+ros2@Robot-1:~$ cd ~/21brs1336
+ros2@Robot-1:~/21brs1336$ catkin_make
+Base path: /home/ros2/21brs1336
+Source space: /home/ros2/21brs1336/src
+Build space: /home/ros2/21brs1336/build
+Devel space: /home/ros2/21brs1336/devel
+Install space: /home/ros2/21brs1336/install
+Creating symlink "/home/ros2/21brs1336/src/CMakeLists.txt" pointing to "/opt/ros/noetic/share/catkin/cmake/toplevel.cmake"
+####
+#### Running command: "cmake /home/ros2/21brs1336/src -DCATKIN_DEVEL_PREFIX=/home/ros2/21brs1336/devel -DCMAKE_INSTALL_PREFIX=/home/ros2/21brs1336/install -G Unix Makefiles" in "/home/ros2/21brs1336/build"
+####
+-- The C compiler identification is GNU 9.4.0
+-- The CXX compiler identification is GNU 9.4.0
+-- Check for working C compiler: /usr/bin/cc
+-- Check for working C compiler: /usr/bin/cc -- works
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Check for working CXX compiler: /usr/bin/c++
+-- Check for working CXX compiler: /usr/bin/c++ -- works
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Using CATKIN_DEVEL_PREFIX: /home/ros2/21brs1336/devel
+-- Using CMAKE_PREFIX_PATH: /opt/ros/noetic
+-- This workspace overlays: /opt/ros/noetic
+-- Found PythonInterp: /usr/bin/python3 (found suitable version "3.8.10", minimum required is "3") 
+-- Using PYTHON_EXECUTABLE: /usr/bin/python3
+-- Using Debian Python package layout
+-- Found PY_em: /usr/lib/python3/dist-packages/em.py  
+-- Using empy: /usr/lib/python3/dist-packages/em.py
+-- Using CATKIN_ENABLE_TESTING: ON
+-- Call enable_testing()
+-- Using CATKIN_TEST_RESULTS_DIR: /home/ros2/21brs1336/build/test_results
+-- Forcing gtest/gmock from source, though one was otherwise available.
+-- Found gtest sources under '/usr/src/googletest': gtests will be built
+-- Found gmock sources under '/usr/src/googletest': gmock will be built
+-- Found PythonInterp: /usr/bin/python3 (found version "3.8.10") 
+-- Found Threads: TRUE  
+-- Using Python nosetests: /usr/bin/nosetests3
+-- catkin 0.8.10
+-- BUILD_SHARED_LIBS is on
+-- BUILD_SHARED_LIBS is on
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/ros2/21brs1336/build
+####
+#### Running command: "make -j12 -l12" in "/home/ros2/21brs1336/build"
+####
+ros2@Robot-1:~/21brs1336$ source devel/setup.bash
+ros2@Robot-1:~/21brs1336$ cd ~/21brs1336/src
+ros2@Robot-1:~/21brs1336/src$ catkin_create_pkg new_pkg rospy roscpp
+Created file new_pkg/package.xml
+Created file new_pkg/CMakeLists.txt
+Created folder new_pkg/include/new_pkg
+Created folder new_pkg/src
+Successfully created files in /home/ros2/21brs1336/src/new_pkg. Please adjust the values in package.xml.
+ros2@Robot-1:~/21brs1336/src$ cd new_pkg
+ros2@Robot-1:~/21brs1336/src/new_pkg$ touch talker.py
+ros2@Robot-1:~/21brs1336/src/new_pkg$ nano talker.py
+ros2@Robot-1:~/21brs1336/src/new_pkg$ touch listener.py
+ros2@Robot-1:~/21brs1336/src/new_pkg$ nano listener.py
+ros2@Robot-1:~/21brs1336/src/new_pkg$ rosrun new_pkg talker.py
+[rosrun] Couldn't find executable named talker.py below /home/ros2/21brs1336/src/new_pkg
+[rosrun] Found the following, but they're either not files,
+[rosrun] or not executable:
+[rosrun]   /home/ros2/21brs1336/src/new_pkg/talker.py
+ros2@Robot-1:~/21brs1336/src/new_pkg$ ^C
+ros2@Robot-1:~/21brs1336/src/new_pkg$
